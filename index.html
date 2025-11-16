@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Acesso a Sites</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Verificador de Acesso</h1>
+            <p class="subtitle">Verifique se os sites estão acessíveis na sua rede</p>
+        </header>
+
+        <div class="controls">
+            <button id="testAllBtn" class="btn btn-primary">Verificar Todos os Sites</button>
+            <button id="clearBtn" class="btn btn-secondary">Limpar Resultados</button>
+            <button id="exportBtn" class="btn btn-success">📋 Gerar Lista de Acessíveis</button>
+            <div id="loadingStatus" class="loading-status"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-label">Total</span>
+                <span class="stat-value" id="totalCount">0</span>
+            </div>
+            <div class="stat-card success">
+                <span class="stat-label">Acessíveis</span>
+                <span class="stat-value" id="accessibleCount">0</span>
+            </div>
+            <div class="stat-card error">
+                <span class="stat-label">Bloqueados</span>
+                <span class="stat-value" id="blockedCount">0</span>
+            </div>
+            <div class="stat-card warning">
+                <span class="stat-label">Testando</span>
+                <span class="stat-value" id="testingCount">0</span>
+            </div>
+        </div>
+
+        <div class="results" id="results">
+            <p class="placeholder">Clique em "Verificar Todos os Sites" para começar</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
